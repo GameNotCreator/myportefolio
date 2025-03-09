@@ -1,26 +1,37 @@
-@import "tailwindcss";
+/* Import a smooth sans-serif font (Roboto) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  scroll-behavior: smooth;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Global button style */
+button {
+  background: transparent;
+  color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0; /* Sharp edges */
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background: #f0f0f0;
+  color: #1a1a1a;
 }
